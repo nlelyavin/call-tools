@@ -12,9 +12,10 @@ def print_statistic(statistic: Dict[str, list]) -> None:
 
 
 def _extract_info_about_employee(employee: str) -> (str, str):
-    """Получение статистики о работнике из строки"""
+    """Получение статистики о работнике из полученной строки"""
 
     split_employee = employee.rpartition(SEPARATOR)
+
     name = split_employee[0]
     work_hours = split_employee[2]
 
@@ -55,7 +56,7 @@ def main(employees: List[str]) -> None:
     """Входная точка в обработку"""
     statistic = get_stat_about_employees(employees=employees)
 
-    print_statistic(statistic)
+    print_statistic(statistic=statistic)
     pass
 
 
